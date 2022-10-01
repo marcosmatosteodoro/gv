@@ -8,16 +8,16 @@ class ExamesController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou na Exames principal';
+        return view('site.exames');
     }
 
     //
     public function buscador($filtro){
-        echo 'Estou na Exames com filtros, filtro escolhido -> ' . $filtro;
+        return view('site.examesFiltros');
     }
 
     //
     public function buscado($id){
-        echo 'Estou na Exames escolhido de id ' . $id;
+        return view('site.exame');
     }
 }

@@ -8,6 +8,6 @@ class QuemSomosController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou em QUem somos';
+        return view('site.quemsomos');
     }
 }

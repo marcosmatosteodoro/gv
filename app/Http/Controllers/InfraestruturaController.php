@@ -8,11 +8,11 @@ class InfraestruturaController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou na Infraestrutura principal';
+        return view('site.infraestrutura');
     }
 
     //
     public function buscado($id){
-        echo 'Estou na Infraestrutura escolhido de id ' . $id;
+        return view('site.infraestruturaGet');
     }
 }

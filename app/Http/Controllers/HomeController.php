@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou na HOME';
+        return view('site.home');
     }
 }

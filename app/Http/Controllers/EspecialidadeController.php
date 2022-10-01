@@ -8,16 +8,16 @@ class EspecialidadeController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou na Especialidade principal';
+        return view('site.especialidades');
     }
 
     //
     public function buscador($filtro){
-        echo 'Estou na Especialidade com filtros, filtro escolhido -> ' . $filtro;
+        return view('site.especialidadesFiltros');
     }
 
     //
     public function buscado($id){
-        echo 'Estou na Especialidade escolhido de id ' . $id;
+        return view('site.especialidade');
     }
 }

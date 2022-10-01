@@ -8,6 +8,6 @@ class FaleConoscoController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou em Fale conosco';
+        return view('site.faleconosco');
     }
 }

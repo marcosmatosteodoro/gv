@@ -8,11 +8,11 @@ class PlanosController extends Controller
 {
     //
     public function principal(){
-        echo 'Estou na Planos principal';
+        return view('site.planos');
     }
 
     //
     public function buscado($id){
-        echo 'Estou na Planos escolhido de id ' . $id;
+        return view('site.plano');
     }
 }
