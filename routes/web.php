@@ -27,15 +27,15 @@ Route::get('/quemsomos', [QuemSomosController::class, 'principal'])->name('site.
 Route::get('/faleconosco', [FaleConoscoController::class, 'principal'])->name('site.faleconosco');
 
 Route::get('/especialidades', [EspecialidadeController::class, 'principal'])->name('site.especialidades');
-Route::get('/especialidades/{filtro}', [EspecialidadeController::class, 'buscador'])->name('site.especialidades.filtros');
+Route::get('/especialidades/{filtro}', [EspecialidadeController::class, 'buscador'])->name('site.especialidadesFiltros');
 Route::get('/especialidade/{id}', [EspecialidadeController::class, 'buscado'])->name('site.especialidade');
 
 Route::get('/exames', [ExamesController::class, 'principal'])->name('site.exames');
-Route::get('/exames/{filtro}', [ExamesController::class, 'buscador'])->name('site.exames.filtros');
+Route::get('/exames/{filtro}', [ExamesController::class, 'buscador'])->name('site.examesFiltros');
 Route::get('/exame/{id}', [ExamesController::class, 'buscado'])->name('site.exame');
 
 Route::get('/infraestrutura', [InfraestruturaController::class, 'principal'])->name('site.infraestrutura');
-Route::get('/infraestrutura/{id}', [InfraestruturaController::class, 'buscado'])->name('site.infraestrutura.id');
+Route::get('/infraestrutura/{id}', [InfraestruturaController::class, 'buscado'])->name('site.infraestruturaGet');
 
 Route::get('/planos', [PlanosController::class, 'principal'])->name('site.planos');
-Route::get('/planos/{id}', [PlanosController::class, 'buscado'])->name('site.planos.id');
+Route::get('/planos/{id}', [PlanosController::class, 'buscado'])->name('site.plano');
