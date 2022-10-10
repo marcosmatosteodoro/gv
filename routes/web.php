@@ -21,10 +21,17 @@ use App\Http\Controllers\PlanosController;
 */
 
 Route::get('/laravel', function () {    return view('welcome'); });
+#Route::fallback(view('404'));
 
-Route::get('/', [HomeController::class, 'principal'])->name('site.home');
-Route::get('/quemsomos', [QuemSomosController::class, 'principal'])->name('site.quemsomos');
-Route::get('/faleconosco', [FaleConoscoController::class, 'principal'])->name('site.faleconosco');
+// Rotas em português
+Route::get('/', [HomeController::class, 'principal'])->name('pt.site.home');
+Route::get('/quemsomos', [QuemSomosController::class, 'principal'])->name('pt.site.quemsomos');
+Route::get('/faleconosco', [FaleConoscoController::class, 'principal'])->name('pt.site.faleconosco');
+
+// Rotas em inglês
+Route::get('/en', [HomeController::class, 'main'])->name('en.site.home');
+Route::get('/about', [QuemSomosController::class, 'main'])->name('en.site.quemsomos');
+Route::get('/contactus', [FaleConoscoController::class, 'main'])->name('en.site.faleconosco');
 
 Route::get('/especialidades', [EspecialidadeController::class, 'principal'])->name('site.especialidades');
 Route::get('/especialidades/{filtro}', [EspecialidadeController::class, 'buscador'])->name('site.especialidadesFiltros');
